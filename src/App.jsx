@@ -1,17 +1,17 @@
-import React from 'react'
-import CryptoHeader from './header.jsx'
-import CryptoInfo from './CryptoInfo'
-
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import CryptoInfo from './CryptoInfo';
+import CoinDetails from './CoinDetails';
+import './index.css';
 
 function App() {
     return (
-        <>
-    <CryptoHeader/>
         <div className="App">
-            <CryptoInfo />
+            <Routes>
+                <Route path="/coin" element={<CryptoInfo />} />
+                <Route path="/coin/:symbol" element={<CoinDetails />} />
+            </Routes>
         </div>
-</>
     );
 }
 
