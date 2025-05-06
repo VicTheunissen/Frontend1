@@ -1,18 +1,21 @@
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import CryptoInfo from './CryptoInfo';
-import CoinDetails from './CoinDetails';
+import { Routes, Route } from 'react-router-dom';
+import CryptoInfo from './CryptoInfo.jsx';
+import CoinDetails from './CoinDetails.jsx';
 import './index.css';
 
-function App() {
-    return (
-        <div className="App">
-            <Routes>
-                <Route path="/coin" element={<CryptoInfo />} />
-                <Route path="/coin/:symbol" element={<CoinDetails />} />
-            </Routes>
-        </div>
-    );
+const  App = ()=> {
+  return (
+
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<CryptoInfo />} />
+          <Route path="/coin/:symbol" element={<CoinDetails />} />
+        </Routes>
+      </div>
+
+  )
 }
 
 export default App;
